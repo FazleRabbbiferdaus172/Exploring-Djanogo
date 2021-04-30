@@ -1,4 +1,10 @@
 h1{
     color: seagreen;
     border: slategrey 2px solid;
+
+}
+
+h2{
+    color: crimson;
+    border: darkgrey 3px solid;
 }

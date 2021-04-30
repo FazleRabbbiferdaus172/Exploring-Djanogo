@@ -10,5 +10,23 @@
 </head>
 <body>
     <h1>YYYYYYYYYOOOOOOOOOOOOOO!!!!!!!!!!</h1>
+    <div class="models_table">
+    {% if access_record %}
+        <table>
+            <thead>
+                <th>webpage</th>
+                <th>Access date</th>
+            </thead>
+            {% for i in access_record %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.date }}</td> 
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h2>No records found</h2>
+    {% endif %}
+    </div>
 </body>
 </html>
