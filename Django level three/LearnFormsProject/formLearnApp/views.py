@@ -9,13 +9,13 @@ def index(request):
 
 def form_name_view(request):
     form_view = forms.FromName()
-    print('ok1')
-    print("request type: ", request.method)
+    # print('ok1')
+    #print("request type: ", request.method)
     if request.method == 'POST':
-        print('ok2')
+        # print('ok2')
         form_view = forms.FromName(request.POST)
         if form_view.is_valid():
-            print('ok3')
+            # print('ok3')
             print("Validation succesful")
             print("NAME: {}".format(form_view.cleaned_data['name']))
             print("EMAIL: {}".format(form_view.cleaned_data['email']))
