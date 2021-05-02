@@ -19,4 +19,5 @@ from formLearnApp import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', admin.site.urls),
+    url(r'^formpage', views.form_name_view, name='form_view')
 ]

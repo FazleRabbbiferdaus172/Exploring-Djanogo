@@ -14,3 +14,8 @@ This repo contains the django things I learned. Projects in this are the result 
 9. **python manage.py migrate** after makemigrations
 10. in admin.py import classes from models and register them in order to use them in website admin. **admin.site.register(className)** to register the table
 11. **python manage.py createsuperuser** . super user is need to access the admin.
+12. In order to create a form first create a file forms.py inside the appName folder, then create a class that inherits forms.Form, create a form just like a model
+13. create a view for the class pass the form (dictinoary) as context.
+12. {{ form }} can be used to create the html
+14. {% csrf_token %} is a must to use the submit button
+15. In order to accept the token first check request.method is 'POST' or not if post then "form = forms.FormName( request.POST ) **POST MUST BE WRITTEN IN CAPITAL** then check if the form.is_valid() then you can do whatever you want with that. **YOU CAN USE CLEAN_DATA after validation**. As an example see the **views.py** of **formLEarnAPP** of **LearnFromsProject** inside **Django level Three** folder
