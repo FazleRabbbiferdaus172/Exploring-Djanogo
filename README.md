@@ -42,4 +42,4 @@ This repo contains the django things I learned. Projects in this are the result 
     5. To use custome filtes, create a directory named **templatestags** inside **AppName** directory, inside **templatestags** directory create a **__init__.py** file, create another file **AppName_filters.py** 
     6. Inside **AppName_filters.py** write **from django import templates** and **register = template.Library()** and **@register.filter(name='nameYouWant')** then write the function
     7. Write **{% load AppName_filters %}** inside the html file in which you want to use the filter. **Don't load it inside parent html file(base.html) it won't work**
-    
+    8. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/tree/main/Django%20level%20Four/TemplateLearnProject) to see an example.
