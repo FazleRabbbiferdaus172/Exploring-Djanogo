@@ -29,8 +29,8 @@ This repo contains the django things I learned. Projects in this are the result 
     2. For coustome validation, make a function outsite of class and the class should thake **value** as the parameter then if the condition is false then use **raise forms.validationError("Your error message")** then you can use this function just like other validators from the django.core.validators . See the **Check_for_f** function from **forms.py** file of **formLearnAPP** folder inside of **LearnFromsProject** inside **Django level Three** folder or [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/blob/main/Django%20level%20three/LearnFormsProject/formLearnApp/forms.py)
     3. In order to use one finction to check all validation, create a method of formClass and name of the function should be **clean**. Then to access all data at once use **super().clean()** then you can have your valodations. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/blob/main/Django%20level%20three/LearnFormsProject/formLearnApp/forms.py) to see an example.
 7. ModelForms:
-    1. import class inside the forms.py then create a class and inherit **forms.ModelForm** 
-    2. write **Class Meta: model = model.modelname** to connect the forms with the model **M in Meta is in capital** **do not write models instead of model**
+    1. import class inside the forms.py then create a class and inherit **forms.ModelForm**.
+    2. write **Class Meta: model = model.modelname** to connect the forms with the model **M in Meta is in capital** **do not write models instead of model**.
     3. Inside meta class you can use **fields = "__all__"** if you want to use all model fields as form fields. you can also use exclude and indlude instead of fields.
-    4. To save the data inside views.py check request.method and write **form = forms.FormName** **(Remember formName not modelName)** then check if the form **is_valid()** then
-    5. **form.save()** to save the form data to the model 
+    4. To save the data inside views.py check request.method and write **form = forms.FormName** **(Remember formName not modelName)** then check if the form **is_valid()** then.
+    5. **form.save()** to save the form data to the model. 
