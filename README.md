@@ -30,16 +30,17 @@ This repo contains the django things I learned. Projects in this are the result 
     3. In order to use one finction to check all validation, create a method of formClass and name of the function should be **clean**. Then to access all data at once use **super().clean()** then you can have your valodations. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/blob/main/Django%20level%20three/LearnFormsProject/formLearnApp/forms.py) to see an example.
 7. ModelForms:
     1. import class inside the forms.py then create a class and inherit **forms.ModelForm**.
-    2. write **Class Meta: model = model.modelname** to connect the forms with the model **M in Meta is in capital** **do not write models instead of model**.
-    3. Inside meta class you can use **fields = "__all__"** if you want to use all model fields as form fields. you can also use exclude and indlude instead of fields.
+    2. write **Class Meta: model = model.modelname** to connect the forms with the model. **M in Meta is in capital** and **do not write models instead of model**.
+    3. Inside meta class you can use **fields = "\_\_all\_\_"** if you want to use all model fields as form fields. you can also use exclude and indlude instead of fields.
     4. To save the data inside views.py check request.method and write **form = forms.FormName** **(Remember formName not modelName)** then check if the form **is_valid()** then.
     5. **form.save()** to save the form data to the model. 
+    6. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/tree/main/Django%20level%20three/ExerciseModelForms) to see an example.
 8. Templates: Relative URLS, Template inheritance, Filters and Custome filters 
     1. For relative url inside templates inside appname/urls.py create a **app_name** variable and store the app name inside it.
-    2. To use relative urls write **{% url 'appName:name' %}** **Do not leave any space after name or before appname inside the ''** and **name is the name you pass in the url do not forget to pass the name in side url**
-    3. For template inheritence use {% block block_name %} {% endblock %} in parent html and inside child html write {% extends 'filepath/fileName.html' %} then {% block block_name %} whatever you want to create {% endblock %}
-    4. To use filter write  **{ value|filterName:"args"}**
-    5. To use custome filtes, create a directory named **templatestags** inside **AppName** directory, inside **templatestags** directory create a **__init__.py** file, create another file **AppName_filters.py** 
-    6. Inside **AppName_filters.py** write **from django import templates** and **register = template.Library()** and **@register.filter(name='nameYouWant')** then write the function
-    7. Write **{% load AppName_filters %}** inside the html file in which you want to use the filter. **Don't load it inside parent html file(base.html) it won't work**
+    2. To use relative urls write **{% url 'appName:name' %}** **Do not leave any space after name or before appname inside the ''** and **name is the name you pass in the url do not forget to pass the name in side url**.
+    3. For template inheritence use {% block block_name %} {% endblock %} in parent html and inside child html write {% extends 'filepath/fileName.html' %} then {% block block_name %} whatever you want to create {% endblock %}.
+    4. To use filter write  **{ value|filterName:"args"}**.
+    5. To use custome filtes, create a directory named **templatestags** inside **AppName** directory, inside **templatestags** directory create a **__init__.py** file, create another file **AppName_filters.py** .
+    6. Inside **AppName_filters.py** write **from django import templates** and **register = template.Library()** and **@register.filter(name='nameYouWant')** then write the function.
+    7. Write **{% load AppName_filters %}**. inside the html file in which you want to use the filter. **Don't load it inside parent html file(base.html) it won't work**.
     8. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/tree/main/Django%20level%20Four/TemplateLearnProject) to see an example.
