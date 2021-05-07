@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'templateLearnApp/base.html' %}
+{% load templateLearnApp_filters %}
+{% block start_block %}
+    <h1>I'm from index</h1>
+    <h2>{{ text|con:"works" }}</h2>
+    <h2> if {{ num|add:"1" }} == 100: it works</h2>
+    <a href="{% url 'templateLearnApp:other' %}">other page</a>
+    <a href="{% url 'templateLearnApp:relative' %}">relative page</a>
+    <a href="{% url 'admin:index' %}">admin page</a>
+{% endblock %}
