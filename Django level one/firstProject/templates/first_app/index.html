@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First App</title>
-    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <title>Document</title>
+    <style>
+        table, td, .table {
+          border: 1px solid black;
+        }
+        </style>
 </head>
 <body>
-    <h1>Hello this is index.html!</h1>
-    <img src="{% static "images/1.jpeg" %}" alt="ghost of sushiman">
+    <div class="table">
+        <table>
+            <caption>Weekly Weather Forecast of Dhaka</caption>
+            <tr>
+                <th>Ser</th>
+                <th>Date</th>
+                <th>Temp</th>
+                <th>Humidity</th>
+            </tr>
+            {% for i in forecasts %}
+            <tr>
+                <td>{{ i.ser }}</td>
+                <td>{{ i.date }}</td>
+                <td>{{ i.temp }}</td>
+                <td>{{ i.humidity }}</td>
+            </tr>
+            {% endfor%}
+        </table>
+    </div>
 </body>
 </html>
