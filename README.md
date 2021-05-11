@@ -56,4 +56,10 @@ This repo contains the django things I learned. Projects in this are the result 
     8. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/blob/main/Django%20level%20Five/Basic_Project/basic_app/forms.py) to see an example of user model form.
     9. Create form templates. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/blob/main/Django%20level%20Five/Basic_Project/templates/basic_app/registration.html) to see an example of form template.
     10. In the views in order to set the password you should write **user.set_password(user.password)**. If you have image or csv or anytype of file as a form field you should check if the user has uploaded the file by using **if 'profile_pic' in request.FILES**. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/blob/main/Django%20level%20Five/Basic_Project/basic_app/views.py) to see an example of view.py.
+    11. For creating a login you should import **from django.contrib.auth import authenticate, login, logout
+    from django.core.urlresolvers import reverse
+    from django.contrib.auth.decorators import login_required**
+    12. check if the user is authenticate and active by using **user = authenticate(username=username, password=password) and  user.is_active**
+    13. use **login(request, user)** and return a render to login the user
+    14. [Click Here](https://github.com/FazleRabbbiferdaus172/Exploring-Djanogo/blob/main/Django%20level%20Five/Basic_Project/basic_app/views.py) to see an example of view.py.
 
