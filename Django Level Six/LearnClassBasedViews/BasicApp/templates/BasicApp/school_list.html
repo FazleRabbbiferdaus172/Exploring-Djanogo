@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<h1>School List:</h1>
+<div>
+    <ul>
+        {% for i in schools %}
+            <li><h2>{{ i.name }}</h2></li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}
