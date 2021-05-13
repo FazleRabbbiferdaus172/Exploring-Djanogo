@@ -8,5 +8,5 @@
 {% for student in school_detail.students.all %}
     <p>Name: {{student.name}}  Age: {{student.age}}</p>
 {% endfor %}
-
+<p><a href="{% url 'BasicApp:update' pk=school_detail.pk %}">Update</a></p>
 {% endblock %}
